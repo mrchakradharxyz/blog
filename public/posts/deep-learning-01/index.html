@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name"> | Drax&#39;s Blog</title>
+<meta property="og:title" content=" | Drax&#39;s Blog" />
+<meta name="twitter:title" content=" | Drax&#39;s Blog" />
+<meta itemprop="name" content=" | Drax&#39;s Blog" />
+<meta name="application-name" content=" | Drax&#39;s Blog" />
+<meta property="og:site_name" content="" />
+
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/posts/deep-learning-01/" title="" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=0001-01-01T00:00:00Z />
+    <meta property="article:published_time" content=0001-01-01T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/posts/deep-learning-01/" />
+
+    
+    <meta property="og:article:author" content="Chakradhar" />
+    <meta property="article:author" content="Chakradhar" />
+    <meta name="author" content="Chakradhar" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "0001-01-01",
+        "description": "",
+        "wordCount":  454 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "0001-01-01",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Drax\u0027s Blog"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.147.8">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/deep-learning-01/">
+  <meta property="og:site_name" content="Drax&#39;s Blog">
+  <meta property="og:title" content="Drax&#39;s Blog">
+  <meta property="og:description" content="Perceptron: Output propogation A Perceptron: It is a single neuron with weighted sum, It computes a weighted sum of inputs, adds a bias, then applies an activation function
+$\hat{y} = g\Big(w_0&#43;\sum_{i=1}^{m} x_i w_i\Big)$
+$\hat{y} = g\Big(w_0&#43;X^TW\Big)$
+y = g(z);
+g(): Activation function to add non linearity to the neuron
+z: The result of dot product plus the bias with a activation function (nonlinearity)
+Take a dot product apply a bias and apply a non linearity and keep repeat over">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Drax&#39;s Blog">
+  <meta name="twitter:description" content="Perceptron: Output propogation A Perceptron: It is a single neuron with weighted sum, It computes a weighted sum of inputs, adds a bias, then applies an activation function
+$\hat{y} = g\Big(w_0&#43;\sum_{i=1}^{m} x_i w_i\Big)$
+$\hat{y} = g\Big(w_0&#43;X^TW\Big)$
+y = g(z);
+g(): Activation function to add non linearity to the neuron
+z: The result of dot product plus the bias with a activation function (nonlinearity)
+Take a dot product apply a bias and apply a non linearity and keep repeat over">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/deep-learning-01/">
+    <link href="/style.min.e390ba7da26222f4dc42a349955d76dbbe44e5ce2535a43de5a70633a0a9ec3c.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" crossorigin="anonymous" />
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    integrity="sha512-LQNxIMR5rXv7o+b1l8+N1EZMfhG7iFZ9HhnbJkTp4zjNr5Wvst75AqUeFDxeRUa7l5vEDyUiAip//r+EFLLCyA=="
+    crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    integrity="sha512-iWiuBS5nt6r60fCz26Nd0Zqe0nbk1ZTIQbl3Kv7kYsX+yKMUFHzjaH2+AnM6vp2Xs+gNmaBAVWJjSmuPw76Efg==" crossorigin="anonymous" onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });"></script>
+
+    
+</head>
+<body data-theme = "" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title"></h1>
+                
+                
+            </header>
+            
+            <div class="page-content">
+                <h2 id="perceptron-output-propogation">Perceptron: Output propogation</h2>
+<p>A Perceptron: It is a single neuron with weighted sum, It computes a weighted sum of inputs, adds a bias, then applies an activation function</p>
+<p>$\hat{y} = g\Big(w_0+\sum_{i=1}^{m} x_i w_i\Big)$</p>
+<p>$\hat{y} = g\Big(w_0+X^TW\Big)$</p>
+<p>y = g(z);<br>
+g(): Activation function to add non linearity to the neuron<br>
+z: The result of dot product plus the bias  with a activation function (nonlinearity)</p>
+<p>Take a dot product apply a bias and apply a non linearity and keep repeat over</p>
+<h2 id="multi-output-perceptron">Multi output perceptron</h2>
+<p>To predict multile outputs
+$z_i = w_0,<em>i + \sum</em>{j=1}^m x_i w_j,_i$</p>
+<h2 id="single-layer-neural-network">Single layer neural network</h2>
+<p>$z_i = w_{0,i}^{(1)}+\sum_{j=1}^{m}x_j w_{j,i}^{(1)}$</p>
+<p>$\hat{y}<em>i=g\Big(w</em>{0,i}^{(2)}+\sum_{i=1}^{d1}g(z_i)+w_{j,i}^{(2)}\Big)$</p>
+<p><strong>Neural Network Loss</strong>: How far the prediction is from the ground truth of the data
+The smaller the loss the close the ouput prediction and actual truth<br>
+To train a neural network / model we need to know the bad predictions</p>
+<p><strong>Remeber</strong>: OUR LOSS IS A FUNCTION OF NETWORK WEIGHT</p>
+<p>LOSS FUCNTION CAN BE DIFFICULT TO OPTIMIZE</p>
+<h2 id="qunatifying-loss">Qunatifying loss</h2>
+<p>The loss of network meaures the cose incurred from incorrect prediction and
+we need to qunatify how bad predictions is the output vs how good it is(<em>how close the output prediction and the acutal output</em>)</p>
+<p>$L\Big(f(x^{i};W),y^{(i)}\Big)$</p>
+<p>Where</p>
+<ul>
+<li>$f\Big(x^{i};W\Big)= Predicted$</li>
+<li>$y^{i}=Actual$</li>
+</ul>
+<h2 id="empirical-loss-object-function--cost-function--emperical-risk">Empirical Loss (object function / Cost function / Emperical risk)</h2>
+<p>Total loss over entire dataset</p>
+<p>$J(W) = \frac{1}{n}\sum_{i=1}^{n}L\Big(f(x^{i};W),y^{(i)}\Big)$</p>
+<p>Where:</p>
+<ul>
+<li>$y^{(i)}  = Actual$</li>
+<li>$f(x^{(i)};W)  = Predicted$</li>
+</ul>
+<h2 id="binary-cross-entropy-loss">Binary cross entropy loss</h2>
+<p>Can be used with models which output probability b/w 0 and 1</p>
+<p>$ J(W) =\frac{-1}{n}\sum_{i=1}^{n}y^{(i)} log\Big(f(x^{i}; W)\Big)+(1-y^{(i)})log\Big(1-f(x^{i};W)\Big)$</p>
+<p>Where:</p>
+<ul>
+<li>$y^{(i)}  = Actual$</li>
+<li>$f(x^{(i)};W)  = Predicted$</li>
+</ul>
+<h2 id="mean-squared-error-loss">Mean Squared Error Loss</h2>
+<p>It can be used with regression models than prouduces continous real number&rsquo;s</p>
+<p>$J(W)=\frac{1}{n}\sum_{i=1}^{n}\Big(y^{(i)}-f(x^{(i)};W)\Big)^2$</p>
+<p>Where</p>
+<ul>
+<li>$y^{i} = Actual Truth$</li>
+<li>$f(x^{i}; W) = Predicted$</li>
+</ul>
+<h2 id="loss-optimization">Loss Optimization</h2>
+<p>We want to find the network weights to achieve the lowest loss</p>
+<p>$W^{*} = argmin_{m}\frac{1}{n}\sum_{1=1}^nL\Big(f\Big(x^{(i)};W\Big), y^{(i)}\Big)$</p>
+<p>$W^{*} = argmin_{m}J(W)$</p>
+<p>Where</p>
+<ul>
+<li>$W={W^{(0)},W^{(1)},&hellip;..}$</li>
+</ul>
+<p><strong>Compute weight / Adjust weight</strong>:
+$\frac{\partial J(W)}{\partial W}.$</p>
+<h3 id="gradient-descent-alogrithm">Gradient descent Alogrithm</h3>
+<ul>
+<li>Select random weight&rsquo;s ~ $N(0,\sigma^{2})$</li>
+<li>Loop until convergence(meeting point)</li>
+<li>Compute gradient $\frac{\partial J(W)}{\partial W}$</li>
+<li>Update weights $W \leftarrow W - n \frac{\partial J(W)}{\partial W}$ (n = Ada step size)</li>
+<li>Return Weights</li>
+</ul>
+<h3 id="stochastic-gradient-descent">Stochastic Gradient descent</h3>
+<ul>
+<li>Select random weight&rsquo;s ~ $N(0,\sigma^{2})$</li>
+<li>Loop until convergence(meeting point)</li>
+<li>Pick data point i</li>
+<li>Compute gradient $\frac{\partial J_{i}(W)}{\partial W}$</li>
+<li>Update weights $W \leftarrow W - n \frac{\partial J(W)}{\partial W}$ (n = Ada step size)</li>
+<li>Return Weights</li>
+</ul>
+<h3 id="mini-batched-gradient-descent">Mini batched Gradient descent</h3>
+<ul>
+<li>Select random weight&rsquo;s ~ $N(0,\sigma^{2})$</li>
+<li>Loop until convergence(meeting point)</li>
+<li>Pick batch of B data points</li>
+<li>Compute gradient $\frac{\partial J(W)}{\partial W} = \frac{1}{b}\sum_{k=1}^B\frac{\partial J_{k}(W)}{\partial W}$</li>
+<li>Update weights $W \leftarrow W - n \frac{\partial J(W)}{\partial W}$ (n = Ada step size)</li>
+<li>Return Weights</li>
+</ul>
+<p>Mini bathces leads to train faster parallelize computation + achieve speed increase on GPU</p>
+<h2 id="regularization">Regularization</h2>
+<p>Helps models in fitting the data and prevent from overfitting</p>
+<h2 id="drouputs"><strong>Drouputs</strong></h2>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+</div>
+    <small class="footer_copyright">
+        © 2025 Chakradhar.
+        
+    </small>
+</footer>
+
+
+
+
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

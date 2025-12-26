@@ -1,0 +1,95 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[margin=0.55in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+\usepackage{microtype}
+\pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+\renewcommand{\baselinestretch}{1.0}
+\setlist[itemize]{topsep=2pt,itemsep=1pt,leftmargin=0.15in}
+\titleformat{\section}{\scshape\small\raggedright}{}{0em}{}[\titlerule]
+
+\newcommand{\resumeSub}[4]{%
+  \item \textbf{#1} \hfill {#2} \\
+        {#3} \hfill {#4}
+}
+
+\begin{document}
+
+% ---------- Header ----------
+\begin{center}
+    {\Large \bfseries Poreddy Chakradhar Reddy} \\
+    Hyderabad, India \quad | \quad +91 8520864129 \\
+    \href{mailto:chakrip24@gmail.com}{chakrip24@gmail.com} \quad | \quad 
+    \href{https://github.com/Drax-dr}{github.com/Drax-dr} \quad | \quad
+    \href{https://linkedin.com/in/chakradhar-reddy-879040235}{linkedin.com/in/chakradhar-reddy-879040235}
+\end{center}
+
+% ---------- Summary ----------
+\section{Professional Summary}
+\begin{itemize}
+    \item Full-stack developer experienced in secure, scalable web applications and backend systems using Go, Python, and JavaScript.
+    \item Skilled in REST API development, containerization, system design, and cryptographic protocol implementation.
+    \item Passionate about privacy-first infrastructure, backend architecture, and DevSecOps practices.
+\end{itemize}
+
+% ---------- Technical Skills ----------
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{Languages:} Go, Python, JavaScript, TypeScript
+    \item \textbf{Frameworks:} Flask, FastAPI, Fiber, React, Tailwind CSS
+    \item \textbf{Tools:} Docker, GitHub, Postman, Podman, Docker Compose
+    \item \textbf{Database:} SQLite, PostgreSQL (basic), MongoDB (basic)
+    \item \textbf{Security:} JWT, OAuth2, NaCl, ChaCha20-Poly1305, HTTPS, secure API design
+\end{itemize}
+
+% ---------- Education ----------
+\section{Education}
+\begin{itemize}
+    \resumeSub{Bachelor of Technology in Computer Science and Engineering}{2022–2026}{Malla Reddy Engineering College, Hyderabad}{}
+    \resumeSub{Intermediate - MPC (82.1\%)}{2020–2022}{Narayana Junior College, Hyderabad}{}
+    \resumeSub{High School (CGPA: 10.0)}{Completed}{Sri Chaitanya Techno School, Hyderabad}{}
+\end{itemize}
+
+% ---------- Projects ----------
+\section{Projects}
+\begin{itemize}
+    \item \textbf{Encrypt API} — Go, Fiber  
+    \begin{itemize}
+        \item Secure encryption microservice for text and files using ChaCha20-Poly1305.
+        \item RESTful design, JWT integration, NaCl primitives.
+        \item \href{https://github.com/Drax-dr/encrypt-api}{github.com/Drax-dr/encrypt-api}
+    \end{itemize}
+
+    \item \textbf{Basic Blog App} — Python, Flask  
+    \begin{itemize}
+        \item Blog platform with SQLite, Flask-Login, Semantic UI, Dockerized.
+        \item 500+ Docker pulls; built using modular structure.
+        \item \href{https://github.com/Drax-dr/blog}{github.com/Drax-dr/blog}
+    \end{itemize}
+
+    \item \textbf{Blog API Service} — Flask RESTful API  
+    \begin{itemize}
+        \item JWT-secured backend with CRUD routes and Flask-Admin UI.
+        \item Decoupled blog logic from frontend.
+        \item \href{https://github.com/Drax-dr/blog-api}{github.com/Drax-dr/blog-api}
+    \end{itemize}
+\end{itemize}
+
+% ---------- Soft Skills ----------
+\section{Soft Skills}
+\begin{itemize}
+    \item Problem-solving, critical thinking, fast learner, attention to detail, communication, self-motivation, teamwork
+\end{itemize}
+
+% ---------- Interests ----------
+\section{Interests}
+\begin{itemize}
+    \item Secure APIs, privacy-focused apps, cryptography, backend architecture, developer tools, self-hosting, red teaming, blockchain security
+\end{itemize}
+
+\end{document}

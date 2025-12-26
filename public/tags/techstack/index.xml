@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Techstack on Drax&#39;s Blog</title>
+    <link>http://localhost:1313/tags/techstack/</link>
+    <description>Recent content in Techstack on Drax&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/techstack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TeamX Project tech stack</title>
+      <link>http://localhost:1313/posts/teamx-project/</link>
+      <pubDate>Mon, 23 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/teamx-project/</guid>
+      
+      <description>&lt;h1 id=&#34;teamx-project-stack-overview&#34;&gt;TeamX Project Stack Overview&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;FROM design TO deployment&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt;: Need a futuristic Secured collabaration platform for all&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;technical-overview&#34;&gt;Technical Overview&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Currently Ongoing&lt;/em&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

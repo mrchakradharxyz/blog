@@ -1,0 +1,65 @@
+baseURL = "https://drax-dr.github.io/"
+languageCode = "en-us"
+title = "Drax's Blog"
+theme = "hugo-blog-awesome"
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.extensions]
+        [markup.goldmark.extensions.passthrough]
+            enable = true
+            [markup.goldmark.extensions.passthrough.delimiters]
+                block = [['\[', '\]'], ['$$', '$$']]
+                inline = [['\(', '\)']]
+
+
+[params]
+  subtitle = "My Personal Blog"
+  dateFormat = "Jan 2, 2006"
+  showToc = true
+  tocOpen = false
+  mainSections = ["posts"]
+  math = true
+
+[params.author]
+  name = "Chakradhar"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
+
+[[menu.projects]]
+  name = "Flask Basic"
+  url = "https://github.com/Drax-dr/flask-basic"
+  weight = 1
+
+[[menu.projects]]
+  name = "Blog API"
+  url = "https://github.com/Drax-dr/blog-api"
+  weight = 2
+
+[[menu.projects]]
+  name = "Flask Stripe"
+  url = "https://github.com/Drax-dr/flask-stripe"
+  weight = 3
+
+[[menu.projects]]
+  name = "Handwriter"
+  url = "https://github.com/Drax-dr/handwriter"
+  weight = 4
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
